@@ -1,0 +1,191 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta
+      name="description"
+      content="Understand absolute-volume proportioning and aggregate moisture corrections through an inspectable trial-mix calculation."
+    />
+    <title>Concrete Mix Design Lab</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <header>
+      <div class="badge">Subhash Dixit · Applied portfolio</div>
+      <h1>Concrete Mix Design Lab</h1>
+      <p>
+        Understand absolute-volume proportioning and aggregate moisture
+        corrections through an inspectable trial-mix calculation.
+      </p>
+      <a href="https://github.com/subhashdixit/concrete-mix-design-lab"
+        >Source, concepts and operating guide ↗</a
+      >
+    </header>
+    <main>
+      <section>
+        <p>
+          This is an educational trial-mix mass balance. It does not select a
+          code-compliant strength, durability class or approved construction
+          mix. Validate materials and laboratory trials with an engineer.
+        </p>
+        <h2>1 · Set your trial assumptions</h2>
+        <form id="mix-form">
+          <div class="grid">
+            <label
+              >Design free water, kg/m³<input
+                id="water"
+                type="number"
+                value="180"
+                min="0.1"
+                max="500"
+                step="0.1"
+                required /></label
+            ><label
+              >Water / binder mass ratio<input
+                id="ratio"
+                type="number"
+                value="0.5"
+                min="0.2"
+                max="0.9"
+                step="0.01"
+                required /></label
+            ><label
+              >SCM fraction of binder (%)<input
+                id="scm"
+                type="number"
+                value="0"
+                min="0"
+                max="70"
+                step="1"
+                required /></label
+            ><label
+              >Cement specific gravity<input
+                id="cementSG"
+                type="number"
+                value="3.15"
+                min="1"
+                max="4"
+                step="0.01"
+                required /></label
+            ><label
+              >SCM specific gravity<input
+                id="scmSG"
+                type="number"
+                value="2.4"
+                min="1"
+                max="4"
+                step="0.01"
+                required /></label
+            ><label
+              >Fine aggregate SSD specific gravity<input
+                id="fineSG"
+                type="number"
+                value="2.65"
+                min="1"
+                max="4"
+                step="0.01"
+                required /></label
+            ><label
+              >Coarse aggregate SSD specific gravity<input
+                id="coarseSG"
+                type="number"
+                value="2.7"
+                min="1"
+                max="4"
+                step="0.01"
+                required /></label
+            ><label
+              >Air volume (%)<input
+                id="air"
+                type="number"
+                value="2"
+                min="0"
+                max="12"
+                step="0.1"
+                required /></label
+            ><label
+              >Fine aggregate fraction of aggregate volume (%)<input
+                id="fineFraction"
+                type="number"
+                value="40"
+                min="10"
+                max="70"
+                step="1"
+                required /></label
+            ><label
+              >Fine absorption, % oven-dry mass<input
+                id="fineAbs"
+                type="number"
+                value="1"
+                min="0"
+                max="15"
+                step="0.1"
+                required /></label
+            ><label
+              >Fine total moisture, % oven-dry mass<input
+                id="fineMC"
+                type="number"
+                value="3"
+                min="0"
+                max="30"
+                step="0.1"
+                required /></label
+            ><label
+              >Coarse absorption, % oven-dry mass<input
+                id="coarseAbs"
+                type="number"
+                value="0.5"
+                min="0"
+                max="15"
+                step="0.1"
+                required /></label
+            ><label
+              >Coarse total moisture, % oven-dry mass<input
+                id="coarseMC"
+                type="number"
+                value="1"
+                min="0"
+                max="30"
+                step="0.1"
+                required /></label
+            ><label
+              >Batch volume (m³)<input
+                id="batch"
+                type="number"
+                value="1"
+                min="0.001"
+                max="100"
+                step="0.001"
+                required
+            /></label>
+          </div>
+          <button type="submit">Calculate trial batch</button>
+        </form>
+      </section>
+      <section>
+        <h2>2 · Inspect quantities and volumes</h2>
+        <div id="volume-bars"></div>
+        <div id="results"></div>
+        <button id="export" disabled>Export assumptions and results</button>
+      </section>
+      <p id="status" role="status" aria-live="polite"></p>
+      <details>
+        <summary>How this works · scope and limitations</summary>
+        <p>
+          Choose design free water and water/binder ratio. Compute binder mass,
+          subtract water/binder/air absolute volumes from 1 m³, and split
+          remaining aggregate volume. Convert SSD aggregate mass to oven-dry and
+          wet batch mass; subtract aggregate free moisture from the water to
+          add. No empirical strength prediction is implied.
+        </p>
+      </details>
+    </main>
+    <footer>
+      <p>
+        GitHub Pages · HTML / JavaScript · Original project preserved in source.
+      </p>
+    </footer>
+    <script type="module" src="./app.js"></script>
+  </body>
+</html>
