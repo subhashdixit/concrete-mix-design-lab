@@ -1,5 +1,8 @@
 # Concrete Mix Design Lab
 
+**Reproducible versions:** [Dependency versions and exact setup](DEPENDENCIES.md).
+
+
 [Open the application](https://subhashdixit.github.io/concrete-mix-design-lab/) · [Report an issue](https://github.com/subhashdixit/concrete-mix-design-lab/issues)
 
 Turn concrete proportioning into an explicit, unit-labelled trial-mix calculation. The original grade/table calculator is preserved for historical comparison; this maintained release focuses on inspectable absolute-volume and moisture arithmetic.
