@@ -111,3 +111,7 @@ Educational trial proportions only. Specific gravity convention must match SSD a
 The test suite checks calculation contracts and invalid inputs. It cannot establish that an input dataset is representative, that a heuristic is scientifically correct for every domain, or that a result is suitable for an automated consequential decision. Read the original source alongside the maintained browser implementation when comparing behavior.
 
 The old custom domain did not resolve during deployment verification, so it has been detached from Pages. To restore a domain later, first configure its DNS and verify ownership in Pages settings.
+
+## Local dependency installation
+
+The maintained app is HTML/CSS/JavaScript and needs no Python packages. `requirements.txt` documents this; install development tools with `npm ci` using the pinned Node/npm versions. See [DEPENDENCIES.md](DEPENDENCIES.md). Original prototype requirements are preserved at `archive/prototype-requirements.in` where present; they are not the supported install command.
