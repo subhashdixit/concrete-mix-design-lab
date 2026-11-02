@@ -1,6 +1,6 @@
 # Concrete Mix Design Lab
 
-[Open the existing custom-domain application](http://concretetechofficial.com/) · [Report an issue](https://github.com/subhashdixit/concrete-mix-design-lab/issues)
+[Open the application](https://subhashdixit.github.io/concrete-mix-design-lab/) · [Report an issue](https://github.com/subhashdixit/concrete-mix-design-lab/issues)
 
 Turn concrete proportioning into an explicit, unit-labelled trial-mix calculation. The original grade/table calculator is preserved for historical comparison; this maintained release focuses on inspectable absolute-volume and moisture arithmetic.
 
@@ -99,7 +99,7 @@ Docker packages code and dependencies into a reproducible runtime. This static a
 
 ## Data provenance and attribution
 
-Original mixdesigncalculator.github.io HTML/JavaScript remains in source. The existing custom-domain declaration concretetechofficial.com is preserved in site/CNAME; no DNS change is made. The maintained formulas express standard mass/volume and moisture balance, with all empirical design choices supplied by the user.
+Original mixdesigncalculator.github.io HTML/JavaScript remains in source. The non-resolving original custom-domain declaration is preserved in archive/original-CNAME; the maintained app uses its free GitHub Pages domain. No DNS records were changed. The maintained formulas express standard mass/volume and moisture balance, with all empirical design choices supplied by the user.
 
 ## Practical limits
 
@@ -107,4 +107,4 @@ Educational trial proportions only. Specific gravity convention must match SSD a
 
 The test suite checks calculation contracts and invalid inputs. It cannot establish that an input dataset is representative, that a heuristic is scientifically correct for every domain, or that a result is suitable for an automated consequential decision. Read the original source alongside the maintained browser implementation when comparing behavior.
 
-The existing custom domain remains attached. Its HTTPS/DNS availability depends on the owner’s domain configuration; repository renaming does not replace that DNS setup.
+The old custom domain did not resolve during deployment verification, so it has been detached from Pages. To restore a domain later, first configure its DNS and verify ownership in Pages settings.
